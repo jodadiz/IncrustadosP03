@@ -60,7 +60,7 @@ int main (int argc, char *argv[]) {
 
   g_object_set (encoder, "insert-sps-pps", TRUE, NULL);
   g_object_set (pay, "pt", 96, NULL);
-  g_object_set (sink, "host", "192.168.1.123", "port", 8001, "sync", FALSE, NULL);
+  g_object_set (sink, "host", "192.168.0.13", "port", 8001, "sync", FALSE, NULL);
 
   // Agregar elementos al pipeline
   gst_bin_add_many (GST_BIN (pipeline), source, capsfilter, encoder, parse, pay, sink, NULL);
